@@ -1,4 +1,4 @@
-# Planet Age Calculator 🌍 🌎 🌏🌝 🌚
+# 🌍 🌎 🌏 🌚 Planet Age Calculator 🌝 🌍 🌎 🌏 
 
 [![forthebadge](http://forthebadge.com/images/badges/made-with-javascript.svg)](http://forthebadge.com)
 
