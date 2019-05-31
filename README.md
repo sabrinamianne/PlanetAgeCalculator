@@ -5,7 +5,7 @@
 
 ## Description
 
-_An application that determines a user’s age based on a planet’s solar years. 
+An application that determines a user’s age based on a planet’s solar years. 
 
 
 ## 💾 Install
@@ -34,7 +34,7 @@ Note: If you're using Linux Bash for Windows, [see this guide](https://www.howto
 
 
 | Specs  |
-| ------------- |:-------------:| -----:|
+| ------------- |
 | Take a person’s age in years |
 | Returns their age in Mercury years.|
 | Returns their age in Venus years.|
