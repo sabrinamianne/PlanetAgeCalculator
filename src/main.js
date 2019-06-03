@@ -17,6 +17,9 @@ $(document).ready(function() {
     $("#fulldate").text(fullDate);
     $("#userAge").text(userBirthday.GetAge());
     $("#ageMercury").text(userBirthday.GetMercureAge());
+    $("#ageVenus").text(userBirthday.GetVenusAge());
+    $("#ageMars").text(userBirthday.GetMarsAge());
+    $("#ageJupiter").text(userBirthday.GetJupiterAge());
     $("#result").show();
 
   });

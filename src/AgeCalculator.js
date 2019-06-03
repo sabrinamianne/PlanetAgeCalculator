@@ -50,4 +50,33 @@ AgeCalculator.prototype.GetMercureAge = function ()
   let userMercureAge = parseInt(userAge/0.24);
   return userMercureAge;
 }
+
+AgeCalculator.prototype.GetVenusAge = function ()
+{
+  let userBirthday = new AgeCalculator(this.year, this.month, this.day);
+  let userAge = userBirthday.GetAge();
+  let userVenusAge = parseInt(userAge/0.62);
+  return userVenusAge;
+}
+
+AgeCalculator.prototype.GetMarsAge = function ()
+{
+  let userBirthday = new AgeCalculator(this.year, this.month, this.day);
+  let userAge = userBirthday.GetAge();
+  let userMarsAge = parseInt(userAge/1.88);
+  return userMarsAge;
+}
+
+AgeCalculator.prototype.GetJupiterAge = function ()
+{
+  let userBirthday = new AgeCalculator(this.year, this.month, this.day);
+  let userAge = userBirthday.GetAge();
+  let userJupiterAge = parseInt(userAge/11.86);
+  return userJupiterAge;
+}
+
+
+
+
+
 exports.ageCalculatorModule = AgeCalculator;
