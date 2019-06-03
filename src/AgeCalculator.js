@@ -33,7 +33,7 @@ AgeCalculator.prototype.GetAge = function() {
     }
     if (userAge < 1 || currentYear< this.year)
     {
-   return "Our application works for people who have at least 1 year old, sorry...";
+   return "0 years old! Our application works for people who have at least 1 year old, sorry...";
     }
   }
   else
@@ -43,7 +43,7 @@ AgeCalculator.prototype.GetAge = function() {
   return userAge;
 }
 
-AgeCalculator.prototype.GetMercureAge = function ()
+AgeCalculator.prototype.GetMercuryAge = function ()
 {
   let userBirthday = new AgeCalculator(this.year, this.month, this.day);
   let userAge = userBirthday.GetAge();
@@ -75,29 +75,79 @@ AgeCalculator.prototype.GetJupiterAge = function ()
   return userJupiterAge;
 }
 
-AgeCalculator.prototype.GetEsperancyMercury = function (esperancyAge)
+AgeCalculator.prototype.GetEsperancyMercury  = function (esperancyAge)
 {
   let ageEsperancy = parseInt(esperancyAge/0.24);
-  return ageEsperancy - this.GetMercureAge()
-}
+  let yearsLeft = ageEsperancy - this.GetMercuryAge();
+  if (yearsLeft===0)
+  {
+    return "The age esperancy on Mwercury is "+ ageEsperancy + " years."+" Unfortunately, compare to your average life expectancy you have no more time to live on Mercury because you have 0 Years left to live !  :(";
+  }
+  if (yearsLeft < 0)
+  {
+    return "The age esperancy on Mercury is "+ ageEsperancy + " years." +"You surpassed the average life expectancy, you have lived " + Math.abs(yearsLeft) + " years "+" past the life expectancy.";
+  }
+  else
+    {
+      return "The age esperancy on Mercury is "+ ageEsperancy + " years." + "You have " + yearsLeft + " left to live on Mercury! :)"
+    }
+  }
 
-AgeCalculator.prototype.GetEsperancyVenus = function (esperancyAge)
+AgeCalculator.prototype.GetEsperancyVenus  = function (esperancyAge)
 {
   let ageEsperancy = parseInt(esperancyAge/0.62);
-  return ageEsperancy - this.GetVenusAge()
-}
+  let yearsLeft = ageEsperancy - this.GetVenusAge();
+  if (yearsLeft===0)
+  {
+    return "The age esperancy on Venus is "+ ageEsperancy + " years."+" Unfortunately, compare to your average life expectancy you have no more time to live on Venus because you have 0 Years left to live !  :(";
+  }
+  if (yearsLeft < 0)
+  {
+    return "The age esperancy on Venus is "+ ageEsperancy + " years." +"You surpassed the average life expectancy, you have lived " + Math.abs(yearsLeft) + " years "+" past the life expectancy.";
+  }
+  else
+    {
+      return "The age esperancy on Venus is "+ ageEsperancy + " years." + "You have " + yearsLeft + " left to live on Venus! :)"
+    }
+  }
 
-AgeCalculator.prototype.GetEsperancyMars = function (esperancyAge)
+AgeCalculator.prototype.GetEsperancyMars  = function (esperancyAge)
 {
   let ageEsperancy = parseInt(esperancyAge/1.88);
-  return ageEsperancy - this.GetMarsAge()
-}
+  let yearsLeft = ageEsperancy - this.GetMarsAge();
+  if (yearsLeft===0)
+  {
+    return "The age esperancy on Mars is "+ ageEsperancy + " years."+" Unfortunately, compare to your average life expectancy you have no more time to live on Mars because you have 0 Years left to live !  :(";
+  }
+  if (yearsLeft < 0)
+  {
+    return "The age esperancy on Mars is "+ ageEsperancy + " years." +"You surpassed the average life expectancy, you have lived " + Math.abs(yearsLeft) + " years "+" past the life expectancy.";
+  }
+  else
+    {
+      return "The age esperancy on Mars is "+ ageEsperancy + " years." + "You have " + yearsLeft + " left to live on Mars! :)"
+    }
+  }
 
 AgeCalculator.prototype.GetEsperancyJupiter = function (esperancyAge)
 {
   let ageEsperancy = parseInt(esperancyAge/11.86);
-  return ageEsperancy - this.GetJupiterAge()
-}
+  let yearsLeft = ageEsperancy - this.GetJupiterAge();
+  if (yearsLeft===0)
+  {
+    return "The age esperancy on Jupiter is "+ ageEsperancy + " years."+" Unfortunately, compare to your average life expectancy you have no more time to live on Jupiter because you have 0 Years left to live on Jupiter !  :(";
+  }
+  if (yearsLeft < 0)
+  {
+    return "The age esperancy on Jupiter is "+ ageEsperancy + " years." +"You surpassed the average life expectancy, you have lived " + Math.abs(yearsLeft) + " years "+" past the life expectancy.";
+  }
+  else
+    {
+      return "The age esperancy on Jupiter is "+ ageEsperancy + " years." + "You have " + yearsLeft + " left to live on Jupiter ! :)"
+    }
+  }
+
+
 
 
 exports.ageCalculatorModule = AgeCalculator;

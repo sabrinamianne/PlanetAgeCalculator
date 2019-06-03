@@ -18,12 +18,13 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Day Checker',
+      title: 'Age Calculator',
       template: './src/index.html',
       inject: 'body'
     })
   ],
   module: {
+
     rules: [
       {
         test: /\.css$/,
@@ -37,6 +38,13 @@ module.exports = {
         exclude: /node_modules/,
         loader: "eslint-loader"
       },
+
+
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        loader: 'file-loader'
+      },
+
       {
         test: /\.js$/,
         exclude: [
