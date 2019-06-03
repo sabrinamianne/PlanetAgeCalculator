@@ -2,10 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Planet Age Calculator</title>
   </head>
   <body>
     <div class="container">
-      <input type = 
+      <label for="mydate">Please enter the date of your  birthday : </label>
+      <input type="date" id="mydate" value="mydate" name="mydate"/>
+      <button id="btn" type="click">Submit</button>
+
+      <div id = "result">
+        <p>You are born the <span id="fulldate"></span> and your age is <span id="userAge"></span> on Earth.<br> See below your age on others planets !</p>
+
+      </div>
   </body>
 </html>
