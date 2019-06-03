@@ -9,6 +9,7 @@ $(document).ready(function() {
   $("#btn").click(function() {
 
     let fullDate = $('#mydate').val();
+    let ageEsperancy = $('#myesperancy').val();
     let splitDate = fullDate.split("-");
     let year = parseInt(splitDate[0]);
     let month = parseInt(splitDate[1]);
@@ -20,6 +21,10 @@ $(document).ready(function() {
     $("#ageVenus").text(userBirthday.GetVenusAge());
     $("#ageMars").text(userBirthday.GetMarsAge());
     $("#ageJupiter").text(userBirthday.GetJupiterAge());
+    $("#yearsEsperancyMercury").text(userBirthday.GetEsperancyMercury(ageEsperancy));
+    $("#yearssEsperancyVenus").text(userBirthday.GetEsperancyVenus(ageEsperancy));
+    $("#yearsEsperancyMars").text(userBirthday.GetEsperancyMars(ageEsperancy));
+    $("#yearsEsperancyJupiter").text(userBirthday.GetEsperancyJupiter(ageEsperancy));
     $("#result").show();
 
   });

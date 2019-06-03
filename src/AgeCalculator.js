@@ -75,8 +75,29 @@ AgeCalculator.prototype.GetJupiterAge = function ()
   return userJupiterAge;
 }
 
+AgeCalculator.prototype.GetEsperancyMercury = function (esperancyAge)
+{
+  let ageEsperancy = parseInt(esperancyAge/0.24);
+  return ageEsperancy - this.GetMercureAge()
+}
 
+AgeCalculator.prototype.GetEsperancyVenus = function (esperancyAge)
+{
+  let ageEsperancy = parseInt(esperancyAge/0.62);
+  return ageEsperancy - this.GetVenusAge()
+}
 
+AgeCalculator.prototype.GetEsperancyMars = function (esperancyAge)
+{
+  let ageEsperancy = parseInt(esperancyAge/1.88);
+  return ageEsperancy - this.GetMarsAge()
+}
+
+AgeCalculator.prototype.GetEsperancyJupiter = function (esperancyAge)
+{
+  let ageEsperancy = parseInt(esperancyAge/11.86);
+  return ageEsperancy - this.GetJupiterAge()
+}
 
 
 exports.ageCalculatorModule = AgeCalculator;

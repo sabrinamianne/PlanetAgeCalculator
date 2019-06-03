@@ -6,19 +6,25 @@
   </head>
   <body>
     <div class="container">
+      <label for ="myesperancy"> Please enter your average life expectancy from your country : </label>
+      <input type="number" id="myesperancy" max="3" style="width: 3em;" value="myesperancy" name= "myesperancy"/><br>
       <label for="mydate">Please enter the date of your  birthday : </label>
-      <input type="date" id="mydate" value="mydate" name="mydate"/>
+      <input type="date" id="mydate" value="mydate" name="mydate"/><br>
+
       <button id="btn" type="click">Submit</button>
 
       <div id = "result">
         <h2>You are born the <span id="fulldate"></span>
         and your age is <span id="userAge"></span> on Earth.<br>
         See below your age on others planets !</h2>
-        <h2>Your age on Mercury : <span id ="ageMercury"></span> years!</h2>
-        <h2>Your age on Venus : <span id ="ageVenus"></span> years!</h2>
-        <h2>Your age on Mars : <span id ="ageMars"></span> years!</h2>
-        <h2>Your age on Jupiter: <span id ="ageJupiter"></span> years!</h2>
-
+        <h2>Your age on Mercury is : <span id ="ageMercury"></span> years!</h2>
+        <h2>You have  <span id ="yearsEsperancyMercury"></span> years left to live on Mercury!</h2>
+        <h2>Your age on Venus is : <span id ="ageVenus"></span> years!</h2>
+        <h2>You have  <span id ="yearsEsperancyVenus"></span> years left to live on Venus!</h2>
+        <h2>Your age on Mars is : <span id ="ageMars"></span> years!</h2>
+        <h2>You have  <span id ="yearsEsperancyMars"></span> years left to live on Mars!</h2>
+        <h2>Your age on Jupiter is: <span id ="ageJupiter"></span> years!</h2>
+        <h2>You have  <span id ="yearsEsperancyJupiter"></span> years left to live on Jupiter!</h2>
       </div>
   </body>
 </html>
