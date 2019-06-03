@@ -4,7 +4,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from "./image.jpeg";
 
-var AgeCalculator = require ('./AgeCalculator.js').ageCalculatorModule;
+var AgeCalculator = require ('./AgeCalculator.js').AgeCalculatorModule;
 
 $(document).ready(function() {
   $("#btn").click(function() {
@@ -26,7 +26,7 @@ $(document).ready(function() {
     $("#ageMars").text(userBirthday.GetMarsAge());
     $("#ageJupiter").text(userBirthday.GetJupiterAge());
     $("#yearsEsperancyMercury").text(userBirthday.GetEsperancyMercury(ageEsperancy));
-    $("#yearssEsperancyVenus").text(userBirthday.GetEsperancyVenus(ageEsperancy));
+    $("#yearsEsperancyVenus").text(userBirthday.GetEsperancyVenus(ageEsperancy));
     $("#yearsEsperancyMars").text(userBirthday.GetEsperancyMars(ageEsperancy));
     $("#yearsEsperancyJupiter").text(userBirthday.GetEsperancyJupiter(ageEsperancy));
     $("#result").show();

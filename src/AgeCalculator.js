@@ -150,4 +150,4 @@ AgeCalculator.prototype.GetEsperancyJupiter = function (esperancyAge)
 
 
 
-exports.ageCalculatorModule = AgeCalculator;
+exports.AgeCalculatorModule = AgeCalculator;
