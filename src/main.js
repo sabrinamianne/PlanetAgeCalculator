@@ -8,14 +8,15 @@ var AgeCalculator = require ('./AgeCalculator.js').ageCalculatorModule;
 $(document).ready(function() {
   $("#btn").click(function() {
 
-    var fullDate = $('#mydate').val();
-    var splitDate = fullDate.split("-");
-    var year = parseInt(splitDate[0]);
-    var month = parseInt(splitDate[1]);
-    var day = parseInt(splitDate[2]);
-    var userBirthday = new AgeCalculator(year, month, day);
+    let fullDate = $('#mydate').val();
+    let splitDate = fullDate.split("-");
+    let year = parseInt(splitDate[0]);
+    let month = parseInt(splitDate[1]);
+    let day = parseInt(splitDate[2]);
+    let userBirthday = new AgeCalculator(year, month, day);
     $("#fulldate").text(fullDate);
     $("#userAge").text(userBirthday.GetAge());
+    $("#ageMercury").text(userBirthday.GetMercureAge());
     $("#result").show();
 
   });

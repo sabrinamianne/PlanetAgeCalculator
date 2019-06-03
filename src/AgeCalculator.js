@@ -43,5 +43,11 @@ AgeCalculator.prototype.GetAge = function() {
   return userAge;
 }
 
-
+AgeCalculator.prototype.GetMercureAge = function ()
+{
+  let userBirthday = new AgeCalculator(this.year, this.month, this.day);
+  let userAge = userBirthday.GetAge();
+  let userMercureAge = parseInt(userAge/0.24);
+  return userMercureAge;
+}
 exports.ageCalculatorModule = AgeCalculator;
