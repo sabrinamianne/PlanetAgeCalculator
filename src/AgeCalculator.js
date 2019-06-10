@@ -12,36 +12,24 @@ AgeCalculator.prototype.GetAge = function() {
   let userAge= 0;
   if (currentYear > this.year)
   {
-    if (currentMonth === this.month)
-    {
-      if (currentDay >= this.day)
-      {
-        userAge = (currentYear - this.year);
-      }
-      else
-      {
+    if (currentMonth === this.month && currentDay < this.day)
+     {
         userAge = (currentYear - this.year) - 1;
       }
-    }
-    if ( currentMonth < this.month)
+    else if ( currentMonth < this.month)
     {
       userAge = (currentYear - this.year) - 1;
     }
-    if ( currentMonth > this.month)
-    {
-      userAge = (currentYear - this.year);
-    }
-    if (userAge < 1 || currentYear< this.year)
+    else  if (userAge < 1 )
     {
    return "0 years old! Our application works for people who have at least 1 year old, sorry...";
     }
+    else 
+    {
+      userAge = cuurentYear - this.year;
+    }
+    return userAge;
   }
-  else
-  {
-    return "Please, enter a good birthday date!"
-  }
-  return userAge;
-}
 
 AgeCalculator.prototype.GetMercuryAge = function ()
 {
